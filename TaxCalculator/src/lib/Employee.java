@@ -8,19 +8,7 @@ import java.util.List;
 public class Employee extends Person_data {
 
 	private String employeeId;
-	private String firstName;
-	private String lastName;
-	private String idNumber;
-	private String address;
-
-	private int yearJoined;
-	private int monthJoined;
-	private int dayJoined;
-	private int monthWorkingInYear;
-
-	private boolean isForeigner;
-	private boolean gender; // true = Laki-laki, false = Perempuan
-
+	private Person_data data;
 	private int monthlySalary;
 	private int otherMonthlyIncome;
 	private int annualDeductible;
@@ -31,18 +19,21 @@ public class Employee extends Person_data {
 	private List<String> childNames;
 	private List<String> childIdNumbers;
 
-	public Employee(String employeeId, String firstName, String lastName, String idNumber, String address,
-			int yearJoined, int monthJoined, int dayJoined, boolean isForeigner, boolean gender) {
+	public Employee(String employeeId, data person) {
 		this.employeeId = employeeId;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.idNumber = idNumber;
-		this.address = address;
-		this.yearJoined = yearJoined;
-		this.monthJoined = monthJoined;
-		this.dayJoined = dayJoined;
-		this.isForeigner = isForeigner;
-		this.gender = gender;
+		
+		
+		person.setFirstName(Gilbert);
+		person.setLastName("Perangin angin");
+		person.setIdNumber(123456);
+		person.setAddress("Medan");
+
+		person.setDayJoined(20);
+		person.setMonthJoined(04);
+		person.setYearJoined(2022)
+		person.setMonthWorkingInYear();
+		person.setIsForeigner(true);
+		person.setGender(true);
 
 		childNames = new LinkedList<String>();
 		childIdNumbers = new LinkedList<String>();
